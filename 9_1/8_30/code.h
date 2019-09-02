@@ -18,3 +18,5 @@ Node *tianjiajiedian(int num);
 void touchafa(PList plist, int num);
 void weichafa(PList plist, int num);
 void Inversion(PList plist);
+Node* FindK(PList plist);
+Node* FindMid(PList plist);

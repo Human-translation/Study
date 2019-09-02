@@ -40,7 +40,7 @@ void touchafa(PList plist,int num)
 	p->next = pGet;
 }
 
-void weicha(PList plist, int num)
+void weichafa(PList plist, int num)
 {
 	assert(plist != NULL);
 	Node* pGet = tianjiajiedian(num);
@@ -50,6 +50,27 @@ void weicha(PList plist, int num)
 		p = p->next;
 	}
 	p->next = pGet;
+}
+
+Node* FindK(PList plist,int k)
+{
+	assert(plist != NULL);
+	Node* p = plist;
+	Node* q = plist;
+	int i = 0;
+	while (i<k-1)
+	{
+		if (p->next == NULL)
+			return 0;
+		p = p->next;
+		i++;
+	}
+	while (p->next != NULL)
+	{
+		p = p->next;
+		q = q->next;
+	}
+	return q;
 }
 
 void Inversion(PList plist)
@@ -65,4 +86,26 @@ void Inversion(PList plist)
 		q->next = plist->next;
 		plist->next = q;
 	}
+}
+
+Node* FindMid(PList plist)
+{
+	assert(plist != NULL);
+	Node* p = plist;
+	Node* q = plist;
+	while (p)
+	{
+		if (p->next != NULL)
+		{
+			p = p->next->next;
+			q = q->next;
+		}
+		else
+		{
+			p = p->next;
+			q = q->next;
+		}
+
+	}
+	return q;
 }
