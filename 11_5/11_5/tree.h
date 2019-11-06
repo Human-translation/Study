@@ -16,13 +16,15 @@ typedef struct headp
 
 void HeapInit(Heap* hp, HPDataType* arr, int n);
 
+void XiaoDui(HPDataType* arr, int n, int root);
+
 void ShiftDown(HPDataType* a,int n,int root);
 
 void HeapDestory(Heap* hp);
 
 void HeapPush(Heap* hp ,HPDataType x);
 
-void HeadPop(Heap* hp);
+void HeapPop(Heap* hp);
 
 HPDataType HeapTop(Heap* hp);
 
